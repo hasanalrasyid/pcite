@@ -14,6 +14,16 @@ import Data.Tuple.Nested (type (/\))
 import Debug.Trace (spy)
 import Effect (Effect)
 
+
+import Selda (Col, FullQuery, Table(..), aggregate, max_, count, groupBy, leftJoin, lit, notNull, restrict, selectFrom, selectFrom_, showQuery, (.==), (.>))
+import Selda.Aggr (Aggr)
+import Selda.Col (class GetCols)
+import Selda.PG (showPG)
+import Selda.PG.Class (insert_, query)
+import Selda.Table.Constraint (Auto, Default)
+
+import PCite.Types
+
 type Model =
   { todos ∷ Array Todo
   , pending ∷ String

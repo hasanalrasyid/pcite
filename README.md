@@ -1,3 +1,14 @@
+PCite
+=====
+
+Install
+-------
+
+needed for purescript-selda
+> npm install pg decimal.js
+
+
+
 TodoMVC: Purescript on Native Android
 =====================================
 
