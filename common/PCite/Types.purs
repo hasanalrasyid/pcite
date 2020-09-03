@@ -2,9 +2,7 @@ module PCite.Types where
 
 import Prelude
 
-import Selda.Table (Table(..))
 import Data.Maybe (Maybe)
-
 
 type Model =
   { todos ∷ Array Todo
@@ -62,5 +60,4 @@ newTodo = { text: _, id: _, completed: false, editing: false }
 modifyWhere ∷ forall f a. Functor f ⇒ (a → Boolean) → (a → a) → f a → f a
 modifyWhere pred mod = map (\a → if pred a then mod a else a)
 
-people ∷ Table (id ∷ Int, name ∷ String, age ∷ Maybe Int)
-people = Table { name: "people" }
+type Person = {id ∷ Int, name ∷ String, age ∷ Maybe Int}
