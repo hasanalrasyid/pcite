@@ -15,6 +15,8 @@ You can edit this file as you like.
     , "free"
     , "psci-support"
     , "record"
+
+    , "typelevel-prelude"
     ]
 , packages =
     ./packages.dhall

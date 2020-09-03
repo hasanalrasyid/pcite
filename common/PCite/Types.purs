@@ -2,12 +2,8 @@ module PCite.Types where
 
 import Prelude
 
-import Data.Array (length, range, zip)
-import Data.Array as Array
-import Data.Array as F
-import Data.Tuple.Nested (type (/\))
-import Debug.Trace (spy)
-import Effect (Effect)
+import Selda.Table (Table(..))
+import Data.Maybe (Maybe)
 
 
 type Model =
@@ -66,3 +62,5 @@ newTodo = { text: _, id: _, completed: false, editing: false }
 modifyWhere ∷ forall f a. Functor f ⇒ (a → Boolean) → (a → a) → f a → f a
 modifyWhere pred mod = map (\a → if pred a then mod a else a)
 
+people ∷ Table (id ∷ Int, name ∷ String, age ∷ Maybe Int)
+people = Table { name: "people" }
