@@ -9,6 +9,11 @@ needed for purescript-selda
 
 
 
+Server backend: needs to be written in Go, because we want to connect it with cosmos SDK.
+Android Frontend : written in Kotlin, due to android environment.
+
+
+
 TodoMVC: Purescript on Native Android
 =====================================
 
